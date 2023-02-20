@@ -1,0 +1,6 @@
+~* DATA STRUCTURES
+* Storing and arranging data in a manner so that it is convinient.
+* for retrieval and manipulation FOR a given scenario
+
+? Train -> S1, S2, S3, S4, S5 ( index of an array )
+! Telephone Directory -> Sorted by username ( not number ) - Binary search tree
