@@ -4,3 +4,8 @@
 
 ? Train -> S1, S2, S3, S4, S5 ( index of an array )
 ! Telephone Directory -> Sorted by username ( not number ) - Binary search tree
+
+Linked List:
+    - Single linked list
+    - Doubly linekd list
+    - Sentinel linked list
