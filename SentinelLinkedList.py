@@ -56,6 +56,18 @@ class SentinelList:
 
             current_node = current_node.next
 
+    def search_node(self, value):
+        current_node = self.head.next
+
+        while current_node is not self.tail:
+            if current_node.value == value:
+                print("Found node ->",current_node.value)
+                return current_node  # ~* RETURNING CURRENT NODE
+
+            current_node = current_node.next
+        return None
+
+    # ~# Man climbing the wall
     def insertAfter(self, searchValue, insertValue):
         current_node = self.head.next
 
@@ -63,11 +75,11 @@ class SentinelList:
             if current_node.value is searchValue:
                 spot = Node(insertValue)
 
-                spot.prev = current_node
-                spot.next = current_node.next
+                spot.prev = current_node  # ~# Grab my left arm
+                spot.next = current_node.next  # ~# Grab my right arm
 
-                current_node.next.prev = spot
-                current_node.next = spot
+                current_node.next.prev = spot  # ~^ Pick me up
+                current_node.next = spot  # ~^ Pick me up
 
                 return True
 
@@ -88,3 +100,5 @@ SLL.print_forward()
 print("-" * 10)
 SLL.print_backward()
 print("-" * 10)
+
+SLL.search_node(9)  # ~* Recommended way
